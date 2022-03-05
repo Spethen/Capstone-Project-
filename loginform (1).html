@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+
+ form { 
+        border: 3px solid #f1f1f1; 
+    } 
+ input[type=text], input[type=email] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid green; 
+        box-sizing: border-box; 
+    }
+
+ .container { 
+        padding: 25px; 
+        background-color: lightblue;
+    } 
+</style> 
+</head>  
+<body>  
+    <center> <h1> Login Form </h1> </center> 
+    <div class="container">
+    <form action="" method"POST">
+         
+            <label>Username : </label> <br>
+            <input type="text" class ="txt" placeholder="Enter Username" name="username" /> <br>
+            <label> Email ID : </label> <br>
+            <input type="email" class="txt" placeholder="Enter Email ID" name="email" /> <br><br>
+            <input type="submit" name = "Login" value = "Login"/> 
+            
+        
+    </form>   
+</div>
+</body>   
+</html>
+
+<?php
+$connection = sqli_connect("LAPTOP-26QDNSLR\SQLEXPRESS","root","");
+$db = sqli_select_db($connection,'expensemanagementdb');
+
+if (isset($_POST['Login']))
+{
+ $username = $_POST['username'];
+ $email = $_POST['email'];
+ 
+ $query = "INSERT INTO 'emplist'('username','email') VALUES ('$username','$email')";
+ $query_run = sqli_query($connection,$query);
+if($query_run)
+{
+ echo'<script type = "text/javascript"> alert("Data Saved") </script>';
+}
+else
+{
+ echo'<script type = "text/javascript"> alert("Data Not Saved") </script>';
+}
+} 
+ 
+?>
