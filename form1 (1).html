@@ -1,0 +1,83 @@
+<html>
+<body>
+
+<h1>Western IT Group</h1>
+<img src ="https://www.westernit.com/assets/img/brand.svg" height ="200" width ="200">
+<style> 
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+button { 
+       background-color: #4CAF50; 
+       width: 100%;
+        color: orange; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        border: 3px solid #f1f1f1; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid green; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+      
+   
+ .container { 
+        padding: 25px; 
+        background-color: lightblue;
+    } 
+</style> 
+<form>
+  <label for="Purchase Date">Purchase Date:</label>
+  <input type="date" id="Purchase Date" name="Purchase Date"><br>
+<label for="Merchant Name">Merchant Name:</label>
+  <select name="Merchant Name" id="Merchant Name">
+      <option value="1">Amazon</option>
+      <option value="2">Costco</option>
+      <option value="3">Giant Tiger</option>
+      <option value="4">Valu-Mart</option>
+      <option value="5">Choose</option>
+    </select><br>
+<label for="Amount">Amount:</label>
+  <input type="money" id="Amount" name="Amount"><br>
+ <label for="Tax Paid"> Tax Paid</label>
+<input type="checkbox" id="Tax Paid" name="Tax Paid" value="Tax Paid">
+ <br>
+<label for="Department">Department:</label>
+  <select name="Department" id="Department">
+      <option value="1">Customer service</option>
+      <option value="2">Marketing</option>
+      <option value="3">Human resources</option>
+      <option value="4">Engineering</option>
+      <option value="5">Choose</option>
+    </select><br>
+<label for="Purchase type">Purchase type:</label>
+  <select name="Purchase type" id="Purchase type">
+      <option value="1">Standard</option>
+      <option value="2">Blanket</option>
+      <option value="3">Planned</option>
+      <option value="4">Contract</option>
+      <option value="5">Choose</option>
+    </select><br>
+<button type="button" onclick="alert('submitted')">submit</button>
+<button type="button" onclick="alert('Cancelled')">Cancel!</button>
+</form>
+
+</body>
+</html>
